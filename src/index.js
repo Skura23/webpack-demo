@@ -1,10 +1,11 @@
-function component() {
-  let element = document.createElement('div');
+import style from "./main.css";
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+console.log(`I'm a silly entry point`);
 
-  return element;
-}
+const arr = [1, 2, 3];
+const iAmJavascriptES6 = () => console.log(...arr);
+window.iAmJavascriptES6 = iAmJavascriptES6;
 
-document.body.appendChild(component());
+var domDiv = document.createElement('div')
+domDiv.innerText = 'hello webpack12';
+document.querySelectorAll('body')[0].appendChild(domDiv)
